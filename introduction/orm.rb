@@ -54,5 +54,4 @@ movie.director = "周星驰"
 puts '<<'+movie.title+'>> '+movie.director
 movie = Movie.new(2)
 movie.title = "大话西游之大圣娶亲"
-movie.director = "周星驰"
 puts '<<'+movie.title+'>> '+movie.director
