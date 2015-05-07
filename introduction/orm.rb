@@ -45,13 +45,13 @@ class Movie < Entity
 end
 
 movie = Movie.new(1)
-movie.title = "Doctor Strangelove"
-movie.director = "Stanley Kubrick"
-puts '<<'+movie.title+'>> '+movie.director
-movie = Movie.new(2)
 movie.title = "大话西游"
 movie.director = "周星驰"
 puts '<<'+movie.title+'>> '+movie.director
 movie = Movie.new(2)
+movie.title = "Doctor Strangelove"
+movie.director = "Stanley Kubrick"
+puts '<<'+movie.title+'>> '+movie.director
+movie = Movie.new(1)
 movie.title = "大话西游之大圣娶亲"
 puts '<<'+movie.title+'>> '+movie.director
