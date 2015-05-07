@@ -3,8 +3,6 @@ require 'sqlite3'
 Database = SQLite3::Database.new ':memory:'
 
 class Entity
-  attr_reader :table, :ident
-
   def initialize(table, ident)
     @table = table
     @ident = ident
@@ -14,7 +12,7 @@ class Entity
 
   def set(col, val)
     Database.execute "ALTER TABLE #{@table} ADD #{col} TXT" if !Database.execute("PRAGMA table_info(#{@table})").flatten.include?col
-    Database.execute "UPDATE #{@table} SET #{col}='#{val}' WHERE id=#{ident}"
+    Database.execute "UPDATE #{@table} SET #{col}='#{val}' WHERE id=#{@ident}"
   end
 
   def get(col)
